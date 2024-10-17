@@ -1,0 +1,32 @@
+# SDO AIA 文件的存储路径 (可以是包含多个 .fits 文件的文件夹路径)
+# load_path = /Users/niyw/sci/Python_test/AIA/fits/
+load_path = /Users/niyw/sci/Python_test/Slice_test/test2/
+
+# 输出的 VTK 文件存储路径 (保存生成的 VTK 文件的文件夹)
+out_path = /Users/niyw/sci/Python_test/AIA/vtk/
+
+# 经纬度网格的范围（单位为度）
+lon_min = 10
+lon_max = 85
+lat_min = -1
+lat_max = 44
+
+# 参考时间，格式：'YYYY-MM-DDTHH:MM:SS' (如果未提供，将使用 num_ref)
+# 当 time_ref 没有定义时，将使用 num_ref 对应的 FITS 文件中的时间
+time_ref = 2022-10-02T20:20:30.000
+
+# 如果 time_ref 未定义，使用 num_ref 对应的文件 (索引值从 0 开始)
+num_ref = 10
+
+# 输出球面网格的半径（1.0表示一个太阳半径）
+usr_radii = 1.01
+
+# 是否使用对数归一化 (True 表示使用 SymLogNorm)
+log_value = True
+
+# 是否固定最大最小值（不采用比例）
+fix_value = True
+
+# 数据对比度的最小值和最大值，vmin 和 vmax 是比例系数/固定值
+vmin = 10
+vmax = 4000
