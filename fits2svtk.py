@@ -170,7 +170,7 @@ def calculate_longitudes(time_ref, obs_time, latitudes, longitudes, rot_type='ho
     end_longitudes = []
     for lat, lon in zip(latitudes, longitudes):
         longitude_delta = diff_rot_simple(duration_seconds, lat, rot_type)
-        end_longitude = lon - longitude_delta
+        end_longitude = lon + longitude_delta
         end_longitudes.append(end_longitude)
     
     return end_longitudes
